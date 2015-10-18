@@ -5,7 +5,7 @@
 ## Tidy data, and summarize data by activity and subject
 
 # Download and unzip data files
-setwd("~/Coursera/getdata/getdata_proj")
+# setwd("~/Coursera/getdata/getdata_proj")
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 zipfileName <- "./getdat-projectfiles-UCI HAR Dataset.zip"
 download.file(fileUrl, destfile = zipfileName, method = "curl")
@@ -62,5 +62,8 @@ names(tidy.means)[-c(1,2)] <- paste0("Mean",names(tidy.means)[-c(1,2)])
 
 # write table to file
 write.table(tidy.means, "tidy-means.txt", row.names = FALSE)
+
+# return tidy.means table
+tidy.means
 
 
